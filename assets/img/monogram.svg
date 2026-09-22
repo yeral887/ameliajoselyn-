@@ -1,0 +1,12 @@
+<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="gm" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#f0d585"/><stop offset="50%" stop-color="#c9a227"/><stop offset="100%" stop-color="#8a6a1d"/>
+  </linearGradient>
+</defs>
+<text x="100" y="115" font-family="Cormorant Garamond, serif" font-size="90" font-weight="600" text-anchor="middle" fill="url(#gm)">A</text>
+<g fill="none" stroke="url(#gm)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M70 28l6 5 9-11 9 11 6-5-2.5 16H72.5L70 28z"/>
+</g>
+<path d="M40 122 H80 M120 122 H160" stroke="url(#gm)" stroke-width="1.2"/>
+</svg>

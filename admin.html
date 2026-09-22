@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin · Mis XV Amelia</title>
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="loginScreen" class="admin-login-screen">
+  <div class="admin-login-card">
+    <h1>Panel de Amelia</h1>
+    <p>Ingresa la contraseña para ver las confirmaciones y pases.</p>
+    <input type="password" id="loginPassword" placeholder="Contraseña">
+    <button id="loginBtn">Entrar</button>
+    <p class="admin-login-error" id="loginError">Contraseña incorrecta.</p>
+  </div>
+</div>
+
+<!-- DASHBOARD -->
+<div id="dashboard" class="admin-dashboard" style="display:none;">
+
+  <header class="admin-header">
+    <h1>Confirmaciones · Mis XV Amelia</h1>
+    <button id="logoutBtn" class="admin-btn-ghost">Cerrar sesión</button>
+  </header>
+
+  <div id="sheetsWarning" class="admin-warning" style="display:none;">
+    Todavía no conectas Google Sheets. Estás viendo solo las confirmaciones guardadas en <b>este navegador</b>
+    (localStorage). Sigue <b>INSTRUCCIONES-ADMIN.md</b> para conectarlo y ver las confirmaciones desde cualquier
+    dispositivo.
+  </div>
+
+  <section class="admin-cards">
+    <div class="admin-card">
+      <span class="admin-card-num" id="cardRegistros">0</span>
+      <span class="admin-card-label">Familias registradas</span>
+    </div>
+    <div class="admin-card">
+      <span class="admin-card-num" id="cardPendientes">0</span>
+      <span class="admin-card-label">Pendientes de asignar</span>
+    </div>
+    
+    <div class="admin-card">
+      <span class="admin-card-num" id="cardAsignados">0</span>
+      <span class="admin-card-label">Ya con pases asignados</span>
+    </div>
+    <div class="admin-card">
+      <span class="admin-card-num" id="cardPersonasAsignadas">0</span>
+      <span class="admin-card-label">Personas totales asignadas</span>
+    </div>
+  </section>
+
+  <section class="admin-section">
+    <div class="admin-section-head">
+      <h2>Registros y asignación de pases</h2>
+      <button id="refreshBtn" class="admin-btn-ghost">Actualizar</button>
+    </div>
+    <p class="admin-hint">Cada familia se registró sola con su nombre desde la invitación. Tú decides cuántos pases le asignas a cada una: escribe el número y da clic en "Guardar".</p>
+    <div class="admin-table-wrap">
+      <table class="admin-table" id="tablaRegistros">
+        <thead>
+          <tr><th>Nombre</th><th>Mensaje</th><th>Fecha</th><th>Pases asignados</th><th>Estado</th><th></th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+</div>
+
+<script src="config.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>

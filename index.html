@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amelia · Mis XV Años · 27 de Noviembre 2026</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="locked">
+
+<div class="bg-texture"></div>
+<div class="bubbles-layer" id="bubblesLayer"></div>
+
+<!-- ============================================================
+     SOBRE DE ENTRADA
+============================================================ -->
+<div id="envelope-screen">
+  <div class="envelope-wrap">
+    <div class="envelope-caption">
+      <div class="names">Amelia</div>
+      <p>Tienes una invitación</p>
+    </div>
+    <div class="envelope" id="envelope">
+      <div class="envelope-body"></div>
+      <img class="envelope-corner-real tl" src="assets/img/rose_corner_new.png" alt="">
+      <img class="envelope-corner-real tr" src="assets/img/rose_corner_new.png" alt="">
+      <img class="envelope-corner-real bl" src="assets/img/rose_corner_new.png" alt="">
+      <img class="envelope-corner-real br" src="assets/img/rose_corner_new.png" alt="">
+      <div class="envelope-letter"><span class="seal-mini">A</span></div>
+      <div class="envelope-flap"></div>
+      <div class="seal seal-glow">
+        <img class="seal-bg" src="assets/img/corner_ornament.jpg" alt="">
+        <span class="seal-letter">A</span>
+      </div>
+    </div>
+    <div class="tap-hint">Toca el sobre para abrir</div>
+  </div>
+</div>
+
+<main class="invitation">
+
+  <!-- PORTADA -->
+  <section class="portada reveal">
+    <div class="portada-content">
+      <p class="hero-kicker">Mis XV Años</p>
+      <div class="arch-photo-wrap">
+        <img class="arch-photo" src="assets/img/caricatura_amelia.jpg" alt="Amelia">
+      </div>
+      <div class="hero-name">Amelia</div>
+      <div class="hero-sub">Joselyn Rodríguez Reyes</div>
+      <div class="hero-date">27 · Noviembre · 2026</div>
+      <div class="countdown" id="countdown">
+        <div class="countdown-item"><span id="cd-days">00</span><small>Días</small></div>
+        <div class="countdown-item"><span id="cd-hours">00</span><small>Hrs</small></div>
+        <div class="countdown-item"><span id="cd-min">00</span><small>Min</small></div>
+        <div class="countdown-item"><span id="cd-sec">00</span><small>Seg</small></div>
+      </div>
+      <div class="hero-scroll">Desliza<span></span></div>
+    </div>
+  </section>
+
+  <div class="section-divider"><img src="assets/img/divider_gold.png" alt=""></div>
+
+  <!-- MENSAJE -->
+  <section class="intro reveal">
+    <div class="section-bg"></div>
+    <p class="eyebrow">Un momento especial</p>
+    <h2 class="section-title gold-shine">Mi historia</h2>
+    <p class="quote-text">Hoy quiero abrirte un capítulo muy especial de mi vida. Después de quince años llenos
+    de aprendizajes, risas y momentos junto a quienes más quiero, ha llegado el día de celebrar en grande.
+    Quiero compartir esta noche contigo: gracias por ser parte de mi historia y por acompañarme a comenzar
+    esta nueva etapa.</p>
+    <div class="quote-signature">Amelia</div>
+  </section>
+
+  <div class="section-divider"><img src="assets/img/divider_gold.png" alt=""></div>
+
+  <!-- FAMILIA -->
+  <section class="parents reveal">
+    <div class="section-bg" style="background-image:url('assets/img/fondo_pasadizo.jpg');"></div>
+    <p class="eyebrow">Con la bendición de</p>
+    <h2 class="section-title gold-shine">Mi familia</h2>
+    <div class="familia-cards">
+      <div class="familia-card">
+        <h4>Mis papás</h4>
+        <p>Jocelin Reyes Fernández<br>Oscar Rodríguez Reyes</p>
+      </div>
+      <div class="familia-card">
+        <h4>Mi madrina</h4>
+        <p>Concepción Reyes González</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"><img src="assets/img/divider_gold.png" alt=""></div>
+
+  <!-- VESTIMENTA -->
+  <section class="dresscode reveal">
+    <p class="eyebrow">Código de vestimenta</p>
+    <h2 class="section-title gold-shine">Formal</h2>
+    <div class="dress-icons">
+      <img src="assets/icons/dress.svg" alt="">
+      <img src="assets/icons/suit.svg" alt="">
+    </div>
+    <p>Nos encantaría verte lucir tu mejor outfit para esta noche tan especial.</p>
+    <div class="note-pill">El rosa, en todos sus tonos, va reservado para la quinceañera 💗</div>
+  </section>
+
+  <div class="section-divider"><img src="assets/img/divider_gold.png" alt=""></div>
+
+  <!-- REGALOS -->
+  <section class="gifts reveal">
+    <p class="eyebrow">Un detalle</p>
+    <h2 class="section-title gold-shine">Mesa de regalos</h2>
+    <img class="gift-icon" src="assets/icons/gift.svg" alt="">
+    <div class="gift-box">
+    <a class="btn-acc" id="giftLink" href="#" target="_blank" rel="noopener" style="display:none;margin-top:16px;">Ver mesa de regalos</a>
+  </section>
+
+  <div class="section-divider"><img src="assets/img/divider_gold.png" alt=""></div>
+
+  <!-- ITINERARIO -->
+  <section class="itinerary reveal">
+    <p class="eyebrow">Programa</p>
+    <h2 class="section-title gold-shine">Itinerario</h2>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-time">6:50 PM</div><div class="tl-title">Misa</div></div>
+      <div class="tl-item"><div class="tl-time">8:30 PM</div><div class="tl-title">Recepción</div></div>
+      <div class="tl-item"><div class="tl-time">Sin hora fija</div><div class="tl-title">Cena, baile y brindis</div></div>
+      <div class="tl-item"><div class="tl-time">2:00 AM</div><div class="tl-title">Fin de la fiesta</div></div>
+    </div>
+  </section>
+
+  <div class="section-divider"><img src="assets/img/divider_gold.png" alt=""></div>
+
+  <!-- UBICACIONES -->
+  <section class="locations reveal">
+    <p class="eyebrow">Cómo llegar</p>
+    <h2 class="section-title gold-shine">Ubicaciones</h2>
+
+    <div class="location-card">
+      <img class="location-icon" src="assets/icons/church.svg" alt="">
+      <h4>Ceremonia Religiosa</h4>
+      <span class="time">6:50 PM</span>
+      <p>Parroquia de Santa María Magdalena, Atolman<br>
+      Lago Trasimeno #46, esquina con Lago Ladoga<br>Col. Anáhuac</p>
+      <a class="btn-acc" href="https://share.google/3qFVcQtzJLifpS8ag" target="_blank" rel="noopener">Ver ubicación</a>
+    </div>
+
+    <div class="location-card">
+      <img class="location-icon" src="assets/icons/reception.svg" alt="">
+      <h4>Recepción</h4>
+      <span class="time">8:30 PM</span>
+      <p>Salón de fiestas "Los Espejos"<br>
+      Platino #87, Col. Felipe Pescador<br>Entre F.F.C.C. Hidalgo y Boleo, Alcaldía Cuauhtémoc</p>
+      <a class="btn-acc" href="https://share.google/bFgdnCyfaibr8v6xS" target="_blank" rel="noopener">Ver ubicación</a>
+    </div>
+  </section>
+
+  <div class="section-divider"><img src="assets/img/divider_gold.png" alt=""></div>
+
+  <!-- MIS XV AMELIA -->
+  <section class="gallery reveal">
+    <div class="mg-title-solo">
+      <span class="mg-sparkle mg-sparkle-l">✦</span>
+      <span class="mg-title-script">Mis XV Amelia</span>
+      <span class="mg-sparkle mg-sparkle-r">✦</span>
+    </div>
+  </section>
+
+  <div class="section-divider"><img src="assets/img/divider_gold.png" alt=""></div>
+
+  <!-- RSVP -->
+  <section class="rsvp-cta reveal">
+    <p class="eyebrow">Tu presencia es un regalo</p>
+    <h2 class="section-title gold-shine">Confirma tu asistencia</h2>
+    <button class="rsvp-open-btn" id="rsvpTrigger">Confirmar</button>
+  </section>
+
+  <div class="section-divider"><img src="assets/img/divider_gold.png" alt=""></div>
+
+  <!-- CIERRE -->
+  <section class="closing reveal">
+    <p class="eyebrow">Con todo mi cariño</p>
+    <div class="closing-name">Amelia</div>
+    <p class="closing-msg">Gracias por ser parte de mi historia y por acompañarme a celebrar el inicio de esta nueva etapa.</p>
+    <div class="monogram-seal">
+      <img class="seal-bg" src="assets/img/corner_ornament.jpg" alt="">
+      <span class="seal-letter">A</span>
+    </div>
+  </section>
+
+</main>
+
+<!-- MODAL RSVP -->
+<div class="rsvp-overlay" id="rsvpOverlay">
+  <div class="rsvp-modal">
+    <button class="rsvp-close" id="rsvpClose" aria-label="Cerrar">&times;</button>
+    <img class="rsvp-modal-corner tl" src="assets/img/corner_ornament.jpg" alt="" style="mix-blend-mode:screen;">
+    <img class="rsvp-modal-corner br" src="assets/img/corner_ornament.jpg" alt="" style="transform:scale(-1,-1);mix-blend-mode:screen;">
+    <h3 class="rsvp-modal-title">Registrar asistencia</h3>
+    <form id="rsvpForm">
+      <label for="rNombre">Nombre completo (o de tu familia)</label>
+      <input type="text" id="rNombre" required>
+      <label for="rMsg">Mensaje para Amelia (opcional)</label>
+      <textarea id="rMsg"></textarea>
+      <button type="submit" class="rsvp-submit-btn">Confirmar</button>
+    </form>
+    <div class="rsvp-gracias" id="rsvpGracias" style="display:none;">
+      <p class="rsvp-gracias-nombre" id="rsvpGraciasNombre"></p>
+      <p class="rsvp-gracias-msg">Tu registro quedó guardado. En cuanto la familia asigne los pases, te avisarán directamente.</p>
+      <button type="button" class="rsvp-submit-btn" id="rsvpGraciasCerrar">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+<!-- MÚSICA -->
+<button class="music-toggle" id="musicBtn" aria-label="Reproducir música">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" id="musicIcon"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+</button>
+<audio id="bgMusic" src="assets/music/cancion.mp3" loop preload="auto"></audio>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
